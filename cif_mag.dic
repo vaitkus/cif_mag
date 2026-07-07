@@ -4268,6 +4268,62 @@ save_space_group_magn_ssg_transforms.id
 
 save_
 
+save_space_group_magn_ssg_transforms.pp
+
+    _definition.id                '_space_group_magn_ssg_transforms.Pp'
+    _definition.update            2026-07-03
+    _description.text
+;
+    This item is the matrix equivalent of
+    _space_group_magn_ssg_transforms.Pp_superspace, and specifies the
+    transformation (P,p) of the superspace basis vectors from the
+    current setting (a1,...,a(3+d)) to a reference setting
+    (a1',...,a(3+d)') given by
+    _space_group_magn_ssg_transforms.description. The origin shift is
+    presented in the unitless lattice coordinates of the current
+    setting.  The notation and usage are analogous to those of
+    _space_group_magn_transforms.Pp, except that P now represents a
+    superspace point operation and p now represents a superspace
+    translation.
+;
+    _name.category_id             space_group_magn_ssg_transforms
+    _name.object_id               Pp
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Matrix
+    _type.dimension               '[]'
+    _type.contents                Real
+    _units.code                   none
+
+    loop_
+      _description_example.case
+      _description_example.detail
+         [
+          [1  0  0  0  0]
+          [0  1  0  0  0]
+          [0  0  1  0  0]
+          [0  0  0  1  0]
+          [0  0  0  0  1]
+         ]
+;
+         Identity transformation
+;
+         [
+          [0  -1     0  0  0   0.25]
+          [1   0     0  0  0  -0.25]
+          [0   0   0.5  0  0      0]
+          [-1  0     0  0  1   0.25]
+          [0   0  -0.5  1  0      0]
+          [0   0     0  0  0      1]
+         ]
+;
+         Transforms from a supercentered setting to the
+         ISO(3+d)D setting of
+         65.2.43.64.m481.1  Cmmm(0,b1,1/2)000(1,0,g2)0s0.
+;
+
+save_
+
 save_space_group_magn_ssg_transforms.pp_superspace
 
     _definition.id
@@ -5429,4 +5485,7 @@ save_
        key data name.
 
        Added author list.
+
+       Added _space_group_magn_ssg_transforms.Pp by analogy with
+       _space_group_magn_transforms.Pp.
 ;
